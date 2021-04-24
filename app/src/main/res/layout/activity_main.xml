@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:orientation="vertical" tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:titleTextColor="@color/colorWhite" android:background="@color/colorPrimary" >
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/toolbarMore" android:layout_gravity="right"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/icon_more" android:onClick="showPopup"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" tools:openDrawer="left">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/mapView" android:clickable="true"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <include layout="@layout/patrolling_progress_bar"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="130dp" android:layout_height="wrap_content"
+            android:background="@color/darkBlack" android:alpha="0.7"
+            android:layout_gravity="start" android:padding="5dp">
+            <ListView
+                android:id="@+id/menuList"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
+

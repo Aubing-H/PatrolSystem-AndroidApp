@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/barLayout" android:layout_gravity="top|center"
+    android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:padding="10dp" android:layout_marginTop="10dp"
+    android:background="@drawable/corner_shape" android:alpha="0.8" >
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite" android:text="巡更进度..."
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:background="@color/colorWhite"/>
+        <Button
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="退出打卡"  android:onClick="onExitPatrollingClick"/>
+
+    </LinearLayout>
+
+</LinearLayout>
